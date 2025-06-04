@@ -146,23 +146,20 @@
     target="_blank"
     rel="noopener noreferrer"
     class="btn-link yes"
-    >✅ SI VOY</a
-  >
+    >✅ SI VOY</a>
   <a
     href="#"
     class="btn-link no"
     onclick="alert('😈 Se donde vives, conozco tu casa...'); return false;"
-    >❌ NO VOY</a
-  >
+    >❌ NO VOY</a>
 
   <script>
     const audio = document.getElementById("bg-music");
     audio.addEventListener("loadedmetadata", () => {
-      audio.currentTime = 30;
-    });
+      audio.currentTime = 30;});
 
     const countdown = document.getElementById("countdown");
-    const targetDate = new Date("June 7, 2025 15:00:00").getTime();
+    const targetDate = new Date("June 7 2025 15:00:00").getTime();
 
     function updateCountdown() {
       const now = new Date().getTime();
@@ -175,8 +172,7 @@
 
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
       const hours = Math.floor(
-        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-      );
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
