@@ -362,10 +362,11 @@
     <div class="matrix-code" id="matrixCode"></div>
     
     <script>
-        // Configuración de fecha del evento (DD/MM/YYYY)
         const eventDate = new Date();
-        eventDate.setDate(eventDate.getDate() + 3); // 2 semanas desde hoy
-        eventDate.setHours(18, 0, 0, 0);
+const today = eventDate.getDay(); // 0 (domingo) - 6 (sábado)
+const daysUntilSaturday = (6 - today + 7) % 7 || 7; // Si hoy es sábado, ir al próximo
+eventDate.setDate(eventDate.getDate() + daysUntilSaturday);
+eventDate.setHours(15, 0, 0, 0); // Sábado a las 15:00
         
         // Actualizar contador regresivo
         function updateCountdown() {
